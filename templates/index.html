@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram Reel Song Identifier</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            text-align: center; 
+        }
+        input[type="text"] { 
+            width: 100%; 
+            padding: 10px; 
+            margin: 10px 0; 
+        }
+        .error {
+            color: red;
+            background-color: #ffeeee;
+            padding: 10px;
+            border: 1px solid red;
+            border-radius: 5px;
+        }
+        .success {
+            color: green;
+            background-color: #eeffee;
+            padding: 10px;
+            border: 1px solid green;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Instagram Reel Song Identifier</h1>
+    
+    <form method="POST">
+        <input type="text" name="user_input" placeholder="Enter Instagram Reel URL" value="{{ user_input or '' }}" required>
+        <input type="submit" value="Identify Song">
+    </form>
+    
+    {% if error_message %}
+    <div class="error">
+        {{ error_message }}
+    </div>
+    {% endif %}
+    
+    {% if song_name %}
+    <div class="success">
+        <h2>Song Identified!</h2>
+        <p>Song: {{ song_name }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
