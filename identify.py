@@ -5,7 +5,7 @@ def recognize_local_song(file_path):
     url = "https://shazam-song-recognition-api.p.rapidapi.com/recognize/file"
     
     headers = {
-        "x-rapidapi-key": "b7f26d018fmshf859091b39a13c3p1cfd14jsnd9d2996a991d",  # Replace with your API key
+        "x-rapidapi-key": "#",  # Replace with your API key
         "x-rapidapi-host": "shazam-song-recognition-api.p.rapidapi.com"
     }
     
