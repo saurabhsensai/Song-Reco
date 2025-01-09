@@ -7,6 +7,7 @@ import requests
 
 class InstagramAudioExtractor:
     def __init__(self, output_dir="downloads"):
+        
         self.output_dir = output_dir
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
