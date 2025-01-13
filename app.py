@@ -4,6 +4,7 @@ from identify import recognize_local_song
 import time
 import os
 
+
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Required for flashing messages
 
